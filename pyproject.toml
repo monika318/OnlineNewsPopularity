@@ -20,6 +20,10 @@ dependencies = [
     "pytest",
     "python-dotenv",
     "ruff",
+    "jupyterlab (>=4.2.3)",
+    "pandas (==2.2.2)",
+    "scikit-learn (==1.5.1)",
+    "my-krml-25548660 (>=0.1.4,<0.2.0)",
 ]
 requires-python = "==3.11.4"
 
@@ -36,3 +40,11 @@ extend-select = ["I"]  # Add import sorting
 known-first-party = ["adv_mla_2025"]
 force-sort-within-sections = true
 
+[[tool.poetry.source]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+priority = "supplemental"
+
+
+[tool.poetry.dependencies]
+my-krml-25548660 = {source = "testpypi"}
